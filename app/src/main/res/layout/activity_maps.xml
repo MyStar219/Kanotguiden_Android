@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teamlocator.main.ui.MapsActivity">
+
+    <fragment
+        android:id="@+id/main.map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/main.buttons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_size"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_bottom_bar"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/main.buttons.unlock"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/bottom_bar_icon"
+            android:layout_height="@dimen/bottom_bar_icon"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_unlock" />
+
+        <ImageButton
+            android:id="@+id/main.buttons.world"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/bottom_bar_icon"
+            android:layout_height="@dimen/bottom_bar_icon"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_world" />
+
+        <ImageButton
+            android:id="@+id/main.buttons.refresh"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/bottom_bar_icon"
+            android:layout_height="@dimen/bottom_bar_icon"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_reload" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/main.zoom.in"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/bottom_bar_icon"
+        android:layout_height="@dimen/bottom_bar_icon"
+        android:layout_above="@+id/main.buttons"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/interval_normal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_zoom_in" />
+
+    <ImageButton
+        android:id="@+id/main.zoom.out"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/bottom_bar_icon"
+        android:layout_height="@dimen/bottom_bar_icon"
+        android:layout_above="@+id/main.buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/interval_normal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_zoom_out" />
+
+    <TextView
+        android:id="@+id/main.cache.placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main.buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/interval_half"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@android:color/white"
+        android:padding="@dimen/interval_half"
+        android:text="Press unlock button to register completed missions"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:visibility="gone" />
+</RelativeLayout>
+
